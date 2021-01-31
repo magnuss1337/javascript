@@ -2,13 +2,13 @@ var props = false;
 var tonemapClass = 'CEnvTonemapController';
 
 function getValue(name) {
-  var value = UI.GetValue('Script Items', name);
+  var value = UI.GetValue('Script items', name);
 
   return value;
 }
 
 function getColor(name) {
-  var value = UI.GetColor('MISC', 'JAVASCRIPT', 'Script items', name);
+  var value = UI.GetColor('Misc', 'JAVASCRIPT', 'Script items', name);
 
   return value;
 }
@@ -65,10 +65,10 @@ function init() {
   UI.AddCheckbox('enable world color modulation');
   UI.AddColorPicker('world color');
 
-  UI.SetValue('MISC', 'GENERAL', 'Hidden cvars', true);
-  UI.SetValue('MISC', 'PERFORMANCE & INFORMATION', 'Disable post processing', false);
+  UI.SetValue('Misc', 'GENERAL', 'Hidden cvars', true);
+  UI.SetValue('Misc', 'PERFORMANCE & INFORMATION', 'Disable post processing', false);
 
-  Global.RegisterCallback("Draw", "onRender");
+  Cheat.RegisterCallback("Draw", "onRender");
 }
 
 init();
